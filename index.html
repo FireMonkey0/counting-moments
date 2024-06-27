@@ -7,11 +7,12 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
             font-family: Arial, sans-serif;
+            margin: 0;
         }
         h1 {
             font-size: 2em;
@@ -19,12 +20,18 @@
         }
         #counter {
             font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 1.2em;
+            margin-top: auto; /* Pushes the element to the bottom */
         }
     </style>
 </head>
 <body>
     <h1>Counting every moment spent with you</h1>
     <div id="counter">0 seconds</div>
+    <p class="message">- love sweetheart</p>
     <script>
         const startDate = new Date('June 7, 2024 00:00:00').getTime();
         const counterElement = document.getElementById('counter');
