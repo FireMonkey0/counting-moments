@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting Every Moment</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        #counter {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counting every moment spent with you</h1>
+    <div id="counter">0 seconds</div>
+    <script>
+        const startDate = new Date('June 7, 2024 00:00:00').getTime();
+        const counterElement = document.getElementById('counter');
+
+        function updateCounter() {
+            const now = new Date().getTime();
+            const elapsedTime = Math.floor((now - startDate) / 1000);
+            counterElement.textContent = `${elapsedTime} seconds`;
+        }
+
+        setInterval(updateCounter, 1000);
+    </script>
+</body>
+</html>
